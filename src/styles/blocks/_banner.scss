@@ -27,12 +27,14 @@
   }
 
   &__info {
+    position: relative;
     display: flex;
     align-items: center;
     margin-top: 5.3rem;
     font-weight: 800;
     font-size: 1.6rem;
     line-height: 1rem;
+    z-index: 1;
   }
 
   &__year {
@@ -45,11 +47,11 @@
     margin-right: 1.8rem;
     background-color: $black;
     border-radius: 5rem;
-    background-clip: padding-box;
     padding: .5rem 1.4rem;
     border: .2rem solid transparent;
     font-size: 1.6rem;
     line-height: 1.2rem;
+    background-clip: padding-box;
     text-align: center;
 
     &::after {
