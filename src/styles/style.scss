@@ -1,6 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Mulish:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700;800&display=swap');
 @import "blocks/normalize";
 @import "blocks/variables";
+
+@font-face {
+  font-family: 'Marcellus';
+  src: url('../fonts/Marcellus-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 html {
   font-size: 10px;
@@ -14,7 +22,13 @@ body {
   font-family: 'Mulish', sans-serif;
 }
 
+button {
+  outline: none;
+}
+
 @import "blocks/wrapper";
 @import "blocks/header";
 @import "blocks/nav-list";
 @import "blocks/user-list";
+@import "blocks/banner";
+

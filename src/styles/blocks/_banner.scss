@@ -1,0 +1,148 @@
+.banner {
+  position: relative;
+  overflow: hidden;
+  border-bottom: .1rem solid $border-gray;
+
+  &__img-bg {
+    position: absolute;
+    top: -.2rem;
+    left: calc(50% - 16rem);
+    z-index: -1;
+  }
+
+  &__container {
+    width: 53.2rem;
+    padding-top: 11.9rem;
+    padding-bottom: 20.3rem;
+    background: $black;
+    box-shadow: 10rem 0px 10rem $black;
+  }
+
+  &__title {
+    margin: 0;
+    font-family: 'Marcellus', serif;
+    font-size: 8rem;
+    line-height: 7rem;
+    font-weight: 400;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    margin-top: 5.3rem;
+    font-weight: 800;
+    font-size: 1.6rem;
+    line-height: 1rem;
+  }
+
+  &__year {
+    margin-right: 1.8rem;
+  }
+
+  &__age {
+    position: relative;
+    display: inline-block;
+    margin-right: 1.8rem;
+    background-color: $black;
+    border-radius: 5rem;
+    background-clip: padding-box;
+    padding: .5rem 1.4rem;
+    border: .2rem solid transparent;
+    font-size: 1.6rem;
+    line-height: 1.2rem;
+    text-align: center;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -.2rem; 
+      bottom: -.2rem;
+      left: -.2rem; 
+      right: -.2rem;
+      background-color: $bg-blue;
+      background-image: $bg-blue-gradient;
+      border-radius: 5rem;
+      z-index: -1;
+    }
+  }
+
+  &__rating {
+    display: inline-flex;
+    align-items: center;
+
+    &::after {
+      content: "";
+      width: 1.6rem;
+      height: 1.6rem;
+      margin-left: 1rem;
+      background-image: url("../img/start.svg");
+    }
+  }
+
+  &__time {
+    margin-right: 6rem;
+  }
+
+  &__text {
+    max-width: 50.7rem;
+    margin-top: 2.4rem;
+    color: $gray;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
+
+  &__control {
+    margin-top: 3.5rem;
+  }
+
+  &__btn {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    border-radius: 10rem;
+    padding: 1.5rem 3rem;
+    font-family: inherit;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-weight: 800;
+
+    &--main {
+      position: relative;
+      margin-right: 2.7rem;
+      padding-left: 5.9rem;
+      background-color: $bg-blue;
+      background-image: $bg-blue-gradient;
+      color: $white;
+      box-shadow: 0px 4px 50px $bg-blue;
+      transition: .2s ease box-shadow;
+
+      &:hover,
+      &:focus {
+        box-shadow: none;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 3.1rem;
+        top: calc(50% - .9rem);
+        width: 1.4rem;
+        height: 1.8rem;
+        background-image: url("../img/play.svg");
+        background-repeat: no-repeat;
+      }
+    }
+
+    &--more {
+      color: #323232;
+      background-color: $white;
+      transition: background-color, color, ease .2s;
+
+      &:hover,
+      &:focus {
+        color: $white;
+        background-color: transparent;
+      }
+    }
+  }
+}
