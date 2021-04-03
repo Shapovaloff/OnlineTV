@@ -567,4 +567,84 @@ button {
   background-image: url("../img/arrow.svg");
   background-repeat: no-repeat;
 }
+
+.genres {
+  margin-top: 10rem;
+}
+
+.genres__title-link {
+  font: inherit;
+  color: #fff;
+  text-decoration: none;
+}
+
+.genres__list {
+  margin: 0;
+  margin-top: 4rem;
+  padding-left: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-gap: 27px;
+}
+
+.genres__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #fff;
+  border-radius: 20px;
+  min-height: 198px;
+}
+
+.genres__item--romance {
+  background-image: linear-gradient(109.31deg, #FD093F 2.4%, #F383F1 100%);
+}
+
+.genres__item--drama {
+  background-image: linear-gradient(114.5deg, #0FFFDA 2.22%, #3CDB77 68.84%);
+}
+
+.genres__item--historical {
+  background-image: linear-gradient(109.31deg, #B936FF 2.4%, #57DEDA 100%);
+}
+
+.genres__item--action {
+  background-image: linear-gradient(109.31deg, #FD093F 2.4%, #FB1378 2.41%, #FCCB1A 100%);
+}
+
+.genres__item--sci-fi {
+  background-image: linear-gradient(109.31deg, #FF6472 2.4%, #FDA75D 100%);
+}
+
+.genres__item--horror {
+  background-image: linear-gradient(110.16deg, #13547A 2.37%, #80D0C7 96.77%);
+}
+
+.genres__item--comedy {
+  background-image: linear-gradient(109.93deg, #FFF77B 2.37%, #FFBF42 50%);
+}
+
+.genres__item--documentary {
+  background-image: linear-gradient(109.31deg, #1FA2FF 2.4%, #1FA2FF 2.41%, #1F535C 97.46%);
+}
+
+.genres__subtitle {
+  margin: 0;
+  margin-top: 0.8rem;
+  font-size: 2.8rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
 /*# sourceMappingURL=style.css.map */
