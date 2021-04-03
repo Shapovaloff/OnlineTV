@@ -1,2 +1,24 @@
-header  
-  h1 Привет
+header.header 
+  .header__wrapper.wrapper
+    a(href="#!").header__logo
+      img(src="img/logo.svg", alt="Logo")  
+    nav.header__nav
+      ul.header__nav.nav-list 
+        li.nav-list__item
+          a(href="#!").nav-list__link.nav-list__link--active  Home 
+        li.nav-list__item 
+          a(href="#!").nav-list__link TV Shows
+        li.nav-list__item 
+          a(href="#!").nav-list__link Movies
+        li.nav-list__item 
+          a(href="#!").nav-list__link Series
+    ul.header__user-list 
+      li.user-list__item 
+        button.user-list__btn.user-list__btn--search
+      li.user-list__item 
+        button.user-list__btn.user-list__btn--notification
+      li.user-list__item 
+        button.user-list__btn.user-list__btn--user
+
+
+
