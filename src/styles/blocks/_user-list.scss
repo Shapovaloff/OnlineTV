@@ -1,0 +1,41 @@
+.user-list {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+  margin-right: -0.2rem;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 6.2rem;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.2rem;
+    height: 3.2rem;
+    outline: none;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+    border: none;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &--search {
+      background-image: url("../img/search.svg");
+    }
+
+    &--notification {
+      background-image: url("../img/notification.svg");
+    }
+
+    &--user {
+      background-image: url("../img/user.svg");
+    }
+  }
+}

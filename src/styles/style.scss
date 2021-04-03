@@ -1,4 +1,20 @@
-body {
-  background-color: #000;
-  color: #fff;
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Mulish:wght@400;700&display=swap');
+@import "blocks/normalize";
+@import "blocks/variables";
+
+html {
+  font-size: 10px;
 }
+
+body {
+  background-color: $black;
+  color: $white;
+  font-size: 1.4rem;
+  // font-family: 'Marcellus', serif;
+  font-family: 'Mulish', sans-serif;
+}
+
+@import "blocks/wrapper";
+@import "blocks/header";
+@import "blocks/nav-list";
+@import "blocks/user-list";
