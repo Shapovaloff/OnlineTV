@@ -1,0 +1,52 @@
+.actors {
+  margin-top: 6.8rem;
+
+  &__title-link {
+    font: inherit;
+    color: $white;
+    text-decoration: none;
+  }
+
+  &__list {
+    padding-left: 0;
+    margin: 0;
+    margin-top: 4rem;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 6rem;
+  }
+
+  &__item {
+    text-align: center;
+  }
+
+  &__link {
+    overflow: hidden;
+    position: relative;
+    display: block;
+    background-repeat: 50%;
+    height: 19rem;
+    width: 19rem;
+    font: inherit;
+    text-decoration: none;
+    color: $white;
+  }
+
+  &__img {
+    height: 19rem;
+    width: 19rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__subtitle {
+    margin-bottom: 0;
+    margin-top: 2.2rem;
+    font-size: 1.8rem;
+    line-height: 2rem;
+    font-weight: 700;
+  }
+}

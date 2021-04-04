@@ -647,4 +647,60 @@ button {
   line-height: 2rem;
   font-weight: 700;
 }
+
+.actors {
+  margin-top: 6.8rem;
+}
+
+.actors__title-link {
+  font: inherit;
+  color: #fff;
+  text-decoration: none;
+}
+
+.actors__list {
+  padding-left: 0;
+  margin: 0;
+  margin-top: 4rem;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 6rem;
+}
+
+.actors__item {
+  text-align: center;
+}
+
+.actors__link {
+  overflow: hidden;
+  position: relative;
+  display: block;
+  background-repeat: 50%;
+  height: 19rem;
+  width: 19rem;
+  font: inherit;
+  text-decoration: none;
+  color: #fff;
+}
+
+.actors__img {
+  height: 19rem;
+  width: 19rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.actors__subtitle {
+  margin-bottom: 0;
+  margin-top: 2.2rem;
+  font-size: 1.8rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
 /*# sourceMappingURL=style.css.map */
