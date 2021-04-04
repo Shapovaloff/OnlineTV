@@ -10,6 +10,13 @@
   font-weight: 700;
   padding-left: 1.9rem;
 
+  &__link {
+    font: inherit;
+    color: $white;
+    text-decoration: none;
+    transition: opacity ease .2s;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -25,10 +32,23 @@
     content: "";
     position: absolute;
     right: 0;
-    top: calc(50% - .7rem);
+    top: calc(50% - .6rem);
     width: .9rem;
     height: 1.6rem;
     background-image: url("../img/arrow.svg");
     background-repeat: no-repeat;
+    transition: transform ease .2s, opacity ease .2s,;
+  }
+
+  &:hover,
+  &:focus {
+    .subtitle__link {
+      opacity: .7;
+    }
+
+    &::after {
+      opacity: .7;
+      transform: translateX(0.7rem)
+    }
   }
 }

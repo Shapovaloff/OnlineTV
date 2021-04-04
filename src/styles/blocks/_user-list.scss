@@ -24,6 +24,7 @@
     border: none;
     background-repeat: no-repeat;
     background-position: center;
+    transition: opacity ease .2s;
 
     &--search {
       background-image: url("../img/search.svg");
@@ -35,6 +36,11 @@
 
     &--user {
       background-image: url("../img/user.svg");
+    }
+
+    &:hover,
+    &:focus {
+      opacity: .5;
     }
   }
 }
