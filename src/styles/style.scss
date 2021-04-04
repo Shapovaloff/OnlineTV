@@ -5,6 +5,10 @@ html {
   font-size: 10px;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: $black;
   color: $white;
@@ -27,6 +31,8 @@ button {
 @import "blocks/genres";
 @import "blocks/actors";
 @import "blocks/marketing";
+@import "blocks/offer";
+
 
 
 
