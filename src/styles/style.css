@@ -182,10 +182,10 @@ button {
 }
 
 .wrapper {
-  max-width: 160rem;
+  max-width: 150rem;
   margin: 0 auto;
-  padding-left: 8rem;
-  padding-right: 8rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 .header__wrapper {
@@ -812,5 +812,60 @@ button {
 .offer__btn:hover, .offer__btn:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+.footer {
+  background-color: #101012;
+}
+
+.footer__wrapper {
+  max-width: 117rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.footer__logo-block {
+  margin-right: 24px;
+}
+
+.footer__conteiner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 87rem;
+}
+
+.footer__list {
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.footer__item:not(:first-child) {
+  margin-top: 2rem;
+}
+
+.footer__link {
+  text-decoration: none;
+  color: #C2C2C2;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 2rem;
+  -webkit-transition: color ease .2s;
+  transition: color ease .2s;
+}
+
+.footer__link:hover, .footer__link:focus {
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,48 @@
+.footer {
+  background-color: $footer-bg;
+
+  &__wrapper {
+    max-width: 117rem;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+
+  &__logo-block {
+    margin-right: 24px;
+  }
+
+  &__conteiner {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    max-width: 87rem;
+  }
+
+  &__list {
+    margin: 0;
+    padding-left: 0;
+    list-style-type: none;
+  }
+
+  &__item {
+    &:not(:first-child) {
+      margin-top: 2rem;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $gray;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 2rem;
+    transition: color ease .2s;
+
+    &:hover,
+    &:focus {
+      color: $white;
+    }
+  }
+}
