@@ -21,5 +21,4 @@ if (btnMenu && navMenu) {
       ? closeMenu()
       : openMenu();
   });
-  
 }
