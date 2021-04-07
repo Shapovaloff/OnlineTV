@@ -43,4 +43,22 @@
       opacity: .5;
     }
   }
+
+  @include vport--md {
+    &__item:not(:last-child) {
+      margin-right: 3.2rem;
+    }
+  }
+
+  @include vport--sm {
+    margin-left: auto;
+
+    &__btn {
+      padding: 0.4rem;
+    }
+
+    &__item:not(:last-child) {
+      margin-right: 1.6rem;
+    }
+  }
 }

@@ -1,9 +1,13 @@
 header.header 
   .header__wrapper.wrapper
+    button(type="button").header__btn-toggle.js-btn-menu
+      span 
+      span 
+      span
     a(href="#!").header__logo
       img(src="img/logo.svg", alt="Logo")  
     nav.header__nav
-      ul.header__nav-list.nav-list 
+      ul.header__nav-list.nav-list.js-nav-menu
         li.nav-list__item
           a(href="#!").nav-list__link.nav-list__link--active  Home 
         li.nav-list__item 

@@ -3,4 +3,14 @@
   margin: 0 auto;
   padding-left: 3rem;
   padding-right: 3rem;
+
+  @include vport--md {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  @include vport--sm {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+  }
 }

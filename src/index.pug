@@ -4,18 +4,24 @@ doctype html
 html(lang="en")
   head
     title= pageTitle
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    meta(name="description" content="Zack Snyder's Justice League")
     link(rel="stylesheet", href="styles/style.css")
     link(rel="preconnect", href="https://fonts.gstatic.com")
     link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Marcellus&family=Mulish:wght@400;700;800&display=swap")
   body
+    .overlay
     include modules/header
     main 
       include modules/banner
-      include modules/trending-tv-shows
-      include modules/trending-movies
-      include modules/genres
-      include modules/actors
-      include modules/marketing
-      include modules/offer
+    //-   include modules/trending-tv-shows
+    //-   include modules/trending-movies
+    //-   include modules/genres
+    //-   include modules/actors
+    //-   include modules/marketing
+    //-   include modules/offer
 
-    include modules/footer
+    //- include modules/footer
+    script(src="js/script.js")

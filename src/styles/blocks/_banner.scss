@@ -147,4 +147,17 @@
       }
     }
   }
+
+  @include vport--sm {
+    &__img-bg {
+      position: relative;
+      left: 0;
+      top: 0;
+      max-width: 100%;
+    }
+
+    &__wrapper {
+      display: none;
+    }
+  }
 }

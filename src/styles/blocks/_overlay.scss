@@ -1,0 +1,17 @@
+.overlay {
+  position: fixed;
+  left: 0;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100vh;
+  background-color: $black;
+  transition: opacity .3s;
+  pointer-events: none;
+  opacity: 0;
+
+  &--active {
+    opacity: .6;
+    pointer-events: inherit;
+  }
+}

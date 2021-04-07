@@ -1,0 +1,40 @@
+// Desktop first
+
+@mixin vport--1280 {
+  @media (max-width: $viewport--1280) {
+    @content;
+  }
+}
+
+@mixin vport--lg {
+  @media (max-width: $viewport--xl) {
+    @content;
+  }
+}
+
+@mixin vport--md {
+  @media (max-width: $viewport--lg) {
+    @content;
+  }
+}
+
+@mixin vport--sm {
+  @media (max-width: $viewport--md) {
+    @content;
+  }
+}
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+@mixin reset-btn {
+  display: inline-block;
+  padding: 0;
+  outline: none;
+  border:none;
+  background-color: transparent;
+  cursor: pointer;
+}

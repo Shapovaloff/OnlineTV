@@ -1,12 +1,32 @@
 @import "blocks/normalize";
 @import "blocks/variables";
+@import "blocks/mixins";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 html {
+  box-sizing: border-box;
   font-size: 10px;
 }
 
-* {
-  box-sizing: border-box;
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 body {
@@ -21,6 +41,7 @@ button {
   outline: none;
 }
 
+@import "blocks/overlay";
 @import "blocks/wrapper";
 @import "blocks/header";
 @import "blocks/nav-list";
