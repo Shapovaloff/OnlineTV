@@ -7,10 +7,44 @@
     justify-content: space-between;
     padding-top: 7rem;
     padding-bottom: 7rem;
+
+    @include vport--md {
+      flex-direction: column;
+      align-items: center;
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+
+    @include vport--sm {
+      align-items: flex-start;
+      padding-top: 3.2rem;
+      padding-bottom: 3.2rem;
+    }
   }
 
   &__logo-block {
-    margin-right: 24px;
+    margin-right: 2.4rem;
+
+    @include vport--md {
+      margin-right: 0;
+      margin-bottom: 1.6rem;
+    }
+
+    @include vport--sm {
+      margin-bottom: 0;
+    }
+  }
+
+  &__logo-link {
+    display: block;
+
+    @media (max-width: 1150px) {
+      max-width: 14rem;
+    }
+
+    @include vport--sm {
+      max-width: 11rem;
+    }
   }
 
   &__conteiner {
@@ -18,17 +52,61 @@
     width: 100%;
     justify-content: space-between;
     max-width: 87rem;
+
+    @media (max-width: 1150px) {
+      max-width: 78rem;
+    }
+
+    @include vport--md {
+      max-width: 100%;
+    }
+
+    @include vport--sm {
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 350px) {
+      flex-direction: column;
+    }
   }
 
   &__list {
     margin: 0;
     padding-left: 0;
     list-style-type: none;
+
+    @include vport--sm {
+      width: calc(50% - 0.6rem);
+      margin-top: 2.4rem;
+
+      &:not(:nth-child(2n)) {
+        margin-right: 1.2rem;
+      }
+    }
+
+    @media (max-width: 350px) {
+      width: 100%;
+      &:not(:nth-child(2n)) {
+        margin-left: 0;
+      }
+    }
   }
 
   &__item {
     &:not(:first-child) {
       margin-top: 2rem;
+
+      @media (max-width: 1150px) {
+        margin-top: 1.6rem;
+      }
+
+      @include vport--md {
+        margin-top: 1.2rem;
+      }
+
+      @include vport--sm {
+        margin-top: 0.6rem;
+      }
     }
   }
 
@@ -39,9 +117,23 @@
     line-height: 2rem;
     transition: color ease .2s;
 
-    &:hover,
-    &:focus {
-      color: $white;
+    @media (min-width: 1025px) {
+      &:hover,
+      &:focus {
+        color: $white;
+      }
+    }
+
+    @media (max-width: 1150px) {
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+    }
+
+    @include vport--sm {
+      padding-top: .2rem;
+      padding-bottom: .2rem;
+      font-size: 14px;
+      font-weight: 400;
     }
   }
 }
