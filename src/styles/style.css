@@ -2134,8 +2134,23 @@ button.swiper-pagination-bullet {
   margin: 0 .3rem;
 }
 
-.actors {
-  margin-top: 6.8rem;
+.actors__wrapper {
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+}
+
+@media (max-width: 1024px) {
+  .actors__wrapper {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .actors__wrapper {
+    padding-top: 3.2rem;
+    padding-bottom: 3.2rem;
+  }
 }
 
 .actors__list {
@@ -2147,11 +2162,58 @@ button.swiper-pagination-bullet {
   display: grid;
   -ms-grid-columns: (1fr)[6];
       grid-template-columns: repeat(6, 1fr);
-  grid-column-gap: 6rem;
+  grid-gap: 6rem;
+}
+
+@media (max-width: 1300px) {
+  .actors__list {
+    grid-gap: 3rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .actors__list {
+    grid-gap: 2rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .actors__list {
+    margin-top: 3.2rem;
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .actors__list {
+    margin-top: 2.4rem;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1.2rem;
+    grid-row-gap: 1.6rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .actors__list {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .actors__item {
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .actors__link {
@@ -2159,8 +2221,10 @@ button.swiper-pagination-bullet {
   position: relative;
   display: block;
   border-radius: 50%;
-  height: 19rem;
-  width: 19rem;
+  padding-bottom: 100%;
+  max-width: 19rem;
+  max-height: 19rem;
+  width: 100%;
   font: inherit;
   color: #fff;
   -webkit-transition: -webkit-box-shadow ease .2s;
@@ -2169,14 +2233,18 @@ button.swiper-pagination-bullet {
   transition: box-shadow ease .2s, -webkit-box-shadow ease .2s;
 }
 
-.actors__link:hover, .actors__link:focus {
-  -webkit-box-shadow: 0px 0px 20px #326CFF;
-          box-shadow: 0px 0px 20px #326CFF;
+@media (min-width: 1025px) {
+  .actors__link:hover, .actors__link:focus {
+    -webkit-box-shadow: 0px 0px 20px #326CFF;
+            box-shadow: 0px 0px 20px #326CFF;
+  }
 }
 
 .actors__img {
-  height: 19rem;
-  width: 19rem;
+  height: 100%;
+  width: 100%;
+  max-height: 19rem;
+  max-width: 19rem;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -2190,6 +2258,15 @@ button.swiper-pagination-bullet {
   font-size: 1.8rem;
   line-height: 2rem;
   font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .actors__subtitle {
+    margin-top: 1.2rem;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    font-weight: 400;
+  }
 }
 
 .marketing {

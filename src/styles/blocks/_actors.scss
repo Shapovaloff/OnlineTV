@@ -1,5 +1,19 @@
 .actors {
-  margin-top: 6.8rem;
+
+  &__wrapper {
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+
+    @include vport--md {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+
+    @include vport--md {
+      padding-top: 3.2rem;
+      padding-bottom: 3.2rem;
+    }
+  }
 
   &__list {
     padding-left: 0;
@@ -8,11 +22,38 @@
     list-style-type: none;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-column-gap: 6rem;
+    grid-gap: 6rem;
+
+    @media (max-width: 1300px) {
+      grid-gap: 3rem;
+    }
+
+    @media (max-width: 1200px) {
+      grid-gap: 2rem;
+    }
+
+    @include vport--md {
+      margin-top: 3.2rem;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include vport--sm {
+      margin-top: 2.4rem;
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 1.2rem;
+      grid-row-gap: 1.6rem;
+    }
+
+    @media (max-width: 350px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   &__item {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   &__link {
@@ -20,21 +61,27 @@
     position: relative;
     display: block;
     border-radius: 50%;
-    height: 19rem;
-    width: 19rem;
+    padding-bottom: 100%;
+    max-width: 19rem;
+    max-height: 19rem;
+    width: 100%;
     font: inherit;
     color: $white;
     transition: box-shadow ease .2s;
 
-    &:hover,
-    &:focus {
-      box-shadow: 0px 0px 20px $bg-blue;
+    @media (min-width: 1025px) {
+      &:hover,
+      &:focus {
+        box-shadow: 0px 0px 20px $bg-blue;
+      }
     }
   }
 
   &__img {
-    height: 19rem;
-    width: 19rem;
+    height: 100%;
+    width: 100%;
+    max-height: 19rem;
+    max-width: 19rem;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -47,5 +94,12 @@
     font-size: 1.8rem;
     line-height: 2rem;
     font-weight: 700;
+
+    @include vport--sm {
+      margin-top: 1.2rem;
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+      font-weight: 400;
+    }
   }
 }
