@@ -243,7 +243,7 @@ button {
 
 .header {
   position: relative;
-  z-index: 2;
+  z-index: 4;
   background-color: #000;
 }
 
@@ -284,9 +284,6 @@ button {
       -ms-flex-align: center;
           align-items: center;
   padding: 0.3rem 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .header__btn-toggle span {
@@ -321,6 +318,14 @@ button {
 .header__btn-toggle--active span:nth-child(3) {
   -webkit-transform: rotate(-45deg) translate(6px, -5px);
           transform: rotate(-45deg) translate(6px, -5px);
+}
+
+@media (max-width: 768px) {
+  .header__btn-toggle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .header__logo {

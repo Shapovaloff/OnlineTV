@@ -1,6 +1,6 @@
 .header {
   position: relative;
-  z-index: 2;
+  z-index: 4;
   background-color: $black;
 
   &__wrapper {
@@ -27,7 +27,6 @@
     flex-direction: column;
     align-items: center;
     padding: 0.3rem 0;
-    display: flex;
 
     & span {
       position: relative;
@@ -42,19 +41,23 @@
 
     &--active span {
       width: 28px;
-    
+
       &:nth-child(1) {
         transform: rotate(45deg) translate(6px, 5px);
       }
-    
+
       &:nth-child(2) {
         opacity: 0;
         transform: translateX(-0.5rem);
       }
-    
+
       &:nth-child(3) {
         transform: rotate(-45deg) translate(6px, -5px);
       }
+    }
+
+    @include vport--sm {
+      display: flex;
     }
   }
 
