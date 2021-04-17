@@ -1,23 +1,25 @@
-section.movies
-  .movies__wrapper.wrapper 
-    h2.movies__title.subtitle 
-      a(href="#!").movies__title-link.subtitle__link Trending TV Shows
-    ul.movies__list 
-      li.movies__item 
-        a.movies__link
-          img(src="img/posters-tv-shows/poster-1.png", alt="Move").movies__img
-      li.movies__item 
-        a.movies__link
-          img(src="img/posters-tv-shows/poster-2.png", alt="Move").movies__img
-      li.movies__item 
-        a.movies__link
-          img(src="img/posters-tv-shows/poster-3.png", alt="Move").movies__img
-      li.movies__item 
-        a.movies__link
-          img(src="img/posters-tv-shows/poster-4.png", alt="Move").movies__img
-      li.movies__item 
-        a.movies__link
-          img(src="img/posters-tv-shows/poster-5.png", alt="Move").movies__img
-      li.movies__item 
-        a.movies__link
-          img(src="img/posters-tv-shows/poster-6.png", alt="Move").movies__img
+section.trending
+  .trending__wrapper.wrapper
+    a(href="#!").subtitle.subtitle__link
+      h2.trending__title.subtitle__title Trending TV Shows
+    .trending__container.trending__container--tv-shows
+      ul.trending__list.swiper-wrapper
+        li.trending__item.swiper-slide
+          a.trending__link
+            img(src="img/posters-tv-shows/poster-1.png", alt="Move").trending__img
+        li.trending__item.swiper-slide
+          a.trending__link
+            img(src="img/posters-tv-shows/poster-2.png", alt="Move").trending__img
+        li.trending__item.swiper-slide
+          a.trending__link
+            img(src="img/posters-tv-shows/poster-3.png", alt="Move").trending__img
+        li.trending__item.swiper-slide
+          a.trending__link
+            img(src="img/posters-tv-shows/poster-4.png", alt="Move").trending__img
+        li.trending__item.swiper-slide
+          a.trending__link
+            img(src="img/posters-tv-shows/poster-5.png", alt="Move").trending__img
+        li.trending__item.swiper-slide
+          a.trending__link
+            img(src="img/posters-tv-shows/poster-6.png", alt="Move").trending__img
+      .swiper-pagination.trending__pagination

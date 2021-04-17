@@ -23,3 +23,45 @@ if (btnMenu && navMenu) {
     btnMenu.classList.contains('header__btn-toggle--active') ? closeMenu() : openMenu();
   });
 }
+
+// Слайдеры для секций tv-shows movies genres
+const tvShowsContainer = document.querySelector('.trending__container--tv-shows');
+const breakpoint = window.matchMedia('(max-width:1400px)');
+
+let myTVShows;
+
+const breakpointChecker = function () {
+  if (breakpoint.matches === false) {
+    if (myTVShows) {
+      myTVShows.destroy(true, true);
+      return;
+    }
+  } else if (breakpoint.matches === true) {
+    enableTVShows();
+  }
+};
+
+const enableTVShows = function () {
+  if (tvShowsContainer) {
+    myTVShows = new Swiper (tvShowsContainer, {
+      direction: 'horizontal',
+      spaceBetween: 12,
+      slidesPerView: 'auto',
+      freeMode: true,
+      pagination: {
+        el: '.trending__pagination',
+        dynamicBullets: true,
+      },
+
+      breakpoints: {
+        768: {
+          spaceBetween: 16,
+          pagination: false,
+        },
+      },
+    });
+  }
+};
+
+breakpoint.addListener(breakpointChecker);
+breakpointChecker();

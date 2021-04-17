@@ -5,15 +5,27 @@
   padding-top: .9rem;
   padding-bottom: .7rem;
   padding-right: 2.4rem;
-  font-size: 2.8rem;
-  line-height: 2rem;
-  font-weight: 700;
   padding-left: 1.9rem;
 
-  &__link {
-    font: inherit;
+  @include vport--sm {
+    padding-left: 1rem;
+  }
+
+  &__title {
+    font-size: 2.8rem;
+    line-height: 2rem;
+    font-weight: 700;
     color: $white;
     transition: opacity ease .2s;
+
+    @include vport--md {
+      font-size: 2.4rem;
+    }
+
+    @include vport--sm {
+      font-size: 1.8rem;
+    }
+
   }
 
   &::before {
@@ -25,6 +37,18 @@
     top: calc(50% - 1.75rem);
     background-image: $bg-blue-gradient;
     border-radius: 5rem;
+
+    @include vport--md {
+      height: 3rem;
+      top: calc(50% - 1.5rem);
+      width: .6rem;
+    }
+
+    @include vport--sm {
+      height: 2.6rem;
+      top: calc(50% - 1.3rem);
+      width: .3rem;
+    }
   }
 
   &::after {
@@ -39,15 +63,17 @@
     transition: transform ease .2s, opacity ease .2s,;
   }
 
-  &:hover,
-  &:focus {
-    .subtitle__link {
-      opacity: .7;
-    }
+  @media (min-width: 1025px) {
+    &:hover,
+    &:focus {
+      .subtitle__title {
+        opacity: .7;
+      }
 
-    &::after {
-      opacity: .7;
-      transform: translateX(0.7rem)
+      &::after {
+        opacity: .7;
+        transform: translateX(0.7rem)
+      }
     }
   }
 }
