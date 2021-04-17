@@ -38,9 +38,11 @@
       background-image: url("../img/user.svg");
     }
 
-    &:hover,
-    &:focus {
-      opacity: .5;
+    @media (min-width: 1025px) {
+      &:hover,
+      &:focus {
+        opacity: .5;
+      }
     }
   }
 

@@ -1,0 +1,26 @@
+.btn-gradient {
+  @include reset-btn;
+  border-radius: 10rem;
+  padding: 1.5rem 3rem;
+  background-color: $bg-blue;
+  background-image: $bg-blue-gradient;
+  color: $white;
+  box-shadow: 0px 4px 50px $bg-blue;
+  transition: .2s ease box-shadow;
+  font-weight: 800;
+  font-family: inherit;
+  font-size: 1.6rem;
+  line-height: 2rem;
+
+  @media (min-width: 1025px) {
+
+    &:hover,
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  @include vport--sm {
+    box-shadow: 0px 4px 3rem $bg-blue;
+  }
+}

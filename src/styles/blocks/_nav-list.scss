@@ -35,9 +35,11 @@
       }
     }
 
-    &:hover,
-    &:focus {
-      color: $white;
+    @media (min-width: 1025px) {
+      &:hover,
+      &:focus {
+        color: $white;
+      }
     }
   }
 
@@ -49,7 +51,7 @@
 
   @include vport--sm {
     position: absolute;
-    left: -17.2rem;
+    left: -25.2rem;
     top: calc(100% + 0.1rem);
     flex-direction: column;
     align-items: flex-start;
@@ -57,8 +59,8 @@
     height: calc(100vh - 6.5rem);
     height: 100vh;
     z-index: 2;
-    padding: 2.4rem 1.6rem;
-    max-width: 17rem;
+    padding: 3.6rem 1.6rem;
+    max-width: 25rem;
     width: 100%;
     transition: left .5s;
 
@@ -71,15 +73,16 @@
 
       &:not(:last-child) {
         margin-right: 0;
-        margin-bottom: 1.6rem;
+        margin-bottom: 2rem;
       }
     }
 
     &__link {
       padding-top: .1rem;
-      padding-left: .8rem;
+      padding-left: 1rem;
       padding-bottom: .1rem;
-      font-size: 1.4rem;
+      font-size: 1.8rem;
+      line-height: 2.4rem;
       display: block;
       width: 100%;
 
@@ -101,7 +104,7 @@
           bottom: 0;
           height: 100%;
           left: 0;
-          width: 0.2rem;
+          width: 0.3rem;
         }
       }
     }
