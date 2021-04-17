@@ -1,41 +1,123 @@
 .marketing {
-  margin-top: 10rem;
+  &__wrapper {
+    padding-top: 5rem;
+    padding-bottom: 4rem;
 
-  &__container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
-  }
-
-  &__item {
-    flex: 0 0 50%;
-    border-radius: 2rem;
-
-    &:first-child {
-      .marketing__link {
-        border-radius: 2rem 0 0 2rem;
-      }
+    @include vport--sm {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
     }
 
-    &:last-child {
-      .marketing__link {
-        border-radius: 0 2rem 2rem 0;
-      }
+    @include vport--sm {
+      padding-top: 3.2rem;
+      padding-bottom: 3.2rem;
     }
   }
 
   &__link {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    height: 34.1rem;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    background-color: $bg-dark-blue;
+    background-image: $bg-dark-blue-gradient;
+    border-radius: 2rem;
     transition: opacity ease .2s;
 
-    &:hover,
-    &:focus {
-      opacity: .7;
+    @media (min-width: 1025px) {
+      &:hover,
+      &:focus {
+        opacity: .8;
+      }
+    }
+
+    @include vport--md {
+      background-image: linear-gradient(87.02deg, #0D1A73 57.04%, #000000 99.77%);
+    }
+
+    @include vport--sm {
+      background-image: linear-gradient(177.32deg, #0D1A73 3.38%, #000000 107.24%);
+      flex-direction: column;
+      border-radius: 1.2rem;
+    }
+  }
+
+  &__item {
+    overflow: hidden;
+    position: relative;
+    flex: 0 0 50%;
+    width: 100%;
+    min-height: 341px;
+
+    @media (max-width: 1350px) {
+      min-height: 30rem;
+    }
+
+    @media (max-width: 1200px) {
+      min-height: 25.6rem;
+    }
+
+    @include vport--sm {
+      min-height: 20rem;
+    }
+
+    @media (max-width: 650px) {
+      min-height: 18rem;
+    }
+
+    @media (max-width: 400px) {
+      min-height: 15rem;
+    }
+  }
+
+  &__item--banner {
+    border-radius: 2rem 0 0 2rem;
+
+    @include vport--md {
+      flex: 0 0 66%;
+    }
+
+    @include vport--sm {
+      flex: 0 0 100%;
+      border-radius: 1.2rem 1.2rem 0 0;
+    }
+  }
+
+  &__item--release {
+    border-radius: 0 2rem 2rem 0;
+
+    @media (max-width: 1350px) {
+      & img {
+        max-width: 30rem;
+      }
+    }
+
+    @include vport--md {
+      flex: 0 0 34%;
+
+      & img {
+        max-width: 23rem;
+      }
+    }
+
+    @include vport--sm {
+      flex: 0 0 100%;
+      border-radius: 0 0 1.2rem 1.2rem;
+      & img {
+        max-width: 22rem;
+      }
+    }
+
+    @media (max-width: 650px) {
+      & img {
+        max-width: 20rem;
+      }
+    }
+
+    @media (max-width: 400px) {
+      & img {
+        max-width: 19rem;
+      }
     }
   }
 
