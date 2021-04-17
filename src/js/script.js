@@ -27,10 +27,13 @@ if (btnMenu && navMenu) {
 // Слайдеры для секций tv-shows movies genres
 const tvShowsContainer = document.querySelector('.trending__container--tv-shows');
 const moviesContainer = document.querySelector('.trending__container--movies');
+const genresContainer = document.querySelector('.genres__container');
 const breakpoint = window.matchMedia('(max-width:1400px)');
+const breakpoint768 = window.matchMedia('(max-width:768px)');
 
 let myTVShows;
 let moviesShows;
+let genres;
 
 const breakpointChecker = function () {
   if (breakpoint.matches === false) {
@@ -41,6 +44,15 @@ const breakpointChecker = function () {
   } else if (breakpoint.matches === true) {
     enableTVShows();
     enableMovies();
+  }
+
+  if (breakpoint768.matches === false) {
+    if (genres) {
+      genres.destroy(true, true);
+    }
+    return;
+  } else if (breakpoint768.matches === true) {
+    enableGenres();
   }
 };
 
@@ -84,6 +96,23 @@ const enableMovies = function () {
           pagination: false,
         },
       },
+    });
+  }
+};
+
+
+const enableGenres = function () {
+  if (genresContainer) {
+    genres = new Swiper(genresContainer, {
+      direction: 'horizontal',
+      spaceBetween: 12,
+      slidesPerView: 'auto',
+      freeMode: true,
+      pagination: {
+        el: '.genres__pagination',
+        dynamicBullets: true,
+      },
+
     });
   }
 };

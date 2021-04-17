@@ -1,30 +1,31 @@
-section.genres 
-  .genres__wrapper.wrapper 
-    h2.genres__title.subtitle 
-      a(href="#!").genres__title-link.subtitle__link Popular Genres
-    ul.genres__list 
-      li.genres__item.genres__item--romance
-        img(src="img/genres/romance.svg", alt="romance").genres__img
-        h3.genres__subtitle Romance
-      li.genres__item.genres__item--drama
-        img(src="img/genres/drama.svg", alt="drama").genres__img
-        h3.genres__subtitle Drama
-      li.genres__item.genres__item--historical
-        img(src="img/genres/historical.svg", alt="historical").genres__img
-        h3.genres__subtitle Historical
-      li.genres__item.genres__item--action
-        img(src="img/genres/action.svg", alt="action").genres__img
-        h3.genres__subtitle Action
-      li.genres__item.genres__item--sci-fi
-        img(src="img/genres/sci-fi.svg", alt="sci-fi").genres__img
-        h3.genres__subtitle Sci-fi
-      li.genres__item.genres__item--horror 
-        img(src="img/genres/horror.svg", alt="horror").genres__img
-        h3.genres__subtitle Horror
-      li.genres__item.genres__item--comedy
-        img(src="img/genres/comedy.svg", alt="comedy").genres__img
-        h3.genres__subtitle Comedy
-      li.genres__item.genres__item--documentary
-        img(src="img/genres/documentary.svg", alt="documentary").genres__img
-        h3.genres__subtitle Documentary
-          
+section.genres
+  .genres__wrapper.wrapper
+    a(href="#!").subtitle.subtitle__link
+      h2.trending__title.subtitle__title Popular Genres
+    .genres__container.swiper-container
+      ul.genres__list.swiper-wrapper
+        li.genres__item.swiper-slide.genres__item--romance
+          img(src="img/genres/romance.svg", alt="romance").genres__img
+          h3.genres__subtitle Romance
+        li.genres__item.swiper-slide.genres__item--drama
+          img(src="img/genres/drama.svg", alt="drama").genres__img
+          h3.genres__subtitle Drama
+        li.genres__item.swiper-slide.genres__item--historical
+          img(src="img/genres/historical.svg", alt="historical").genres__img
+          h3.genres__subtitle Historical
+        li.genres__item.swiper-slide.genres__item--action
+          img(src="img/genres/action.svg", alt="action").genres__img
+          h3.genres__subtitle Action
+        li.genres__item.swiper-slide.genres__item--sci-fi
+          img(src="img/genres/sci-fi.svg", alt="sci-fi").genres__img
+          h3.genres__subtitle Sci-fi
+        li.genres__item.swiper-slide.genres__item--horror
+          img(src="img/genres/horror.svg", alt="horror").genres__img
+          h3.genres__subtitle Horror
+        li.genres__item.swiper-slide.genres__item--comedy
+          img(src="img/genres/comedy.svg", alt="comedy").genres__img
+          h3.genres__subtitle Comedy
+        li.genres__item.swiper-slide.genres__item--documentary
+          img(src="img/genres/documentary.svg", alt="documentary").genres__img
+          h3.genres__subtitle Documentary
+      .genres__pagination.swiper-pagination
