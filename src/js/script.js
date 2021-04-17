@@ -26,9 +26,11 @@ if (btnMenu && navMenu) {
 
 // Слайдеры для секций tv-shows movies genres
 const tvShowsContainer = document.querySelector('.trending__container--tv-shows');
+const moviesContainer = document.querySelector('.trending__container--movies');
 const breakpoint = window.matchMedia('(max-width:1400px)');
 
 let myTVShows;
+let moviesShows;
 
 const breakpointChecker = function () {
   if (breakpoint.matches === false) {
@@ -38,12 +40,35 @@ const breakpointChecker = function () {
     }
   } else if (breakpoint.matches === true) {
     enableTVShows();
+    enableMovies();
   }
 };
 
 const enableTVShows = function () {
   if (tvShowsContainer) {
     myTVShows = new Swiper (tvShowsContainer, {
+      direction: 'horizontal',
+      spaceBetween: 12,
+      slidesPerView: 'auto',
+      freeMode: true,
+      pagination: {
+        el: '.trending__pagination',
+        dynamicBullets: true,
+      },
+
+      breakpoints: {
+        768: {
+          spaceBetween: 16,
+          pagination: false,
+        },
+      },
+    });
+  }
+};
+
+const enableMovies = function () {
+  if (moviesContainer) {
+    moviesShows = new Swiper (moviesContainer, {
       direction: 'horizontal',
       spaceBetween: 12,
       slidesPerView: 'auto',
